@@ -130,4 +130,8 @@ h2 {
         padding: 14px 32px 14px 16px;
         width: 70%;
     }
+
+    h2 {
+        margin: 32px;
+    }
 }

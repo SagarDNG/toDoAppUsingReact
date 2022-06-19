@@ -15,13 +15,17 @@ function ToDoForm(props) {
 
     const handleSubmit = e => {
         e.preventDefault();
+        if (!input) {
+            alert("To-do Can't be Empty, Please enter something");
+        } else {
+            props.onSubmit({
+                id: Math.floor(Math.random() * 50000),
+                text: input
+            });
 
-        props.onSubmit({
-            id: Math.floor(Math.random() * 50000),
-            text: input
-        });
+            setInput('');
+        }
 
-        setInput('');
     };
 
     return (
