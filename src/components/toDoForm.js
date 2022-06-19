@@ -26,40 +26,43 @@ function ToDoForm(props) {
 
     return (
         <form onSubmit={handleSubmit} className='ToDoForm'>
-            {props.edit ?
-                (
-                    <>
-                        <input
-                            type='text'
-                            placeholder='Update your To-Do'
-                            value={input}
-                            name='text'
-                            className='ToDoInput edit'
-                            onChange={handleChange}
-                            ref={inputRef}
-                        />
-                        <button onClick={handleSubmit} className='ToDoButton edit'>
-                            Update ToDo
-                        </button>
-                    </>
-                ) :
-                (
-                    <>
-                        <input
-                            type='text'
-                            placeholder='Add a To-Do'
-                            value={input}
-                            name='text'
-                            className='ToDoInput'
-                            onChange={handleChange}
-                            ref={inputRef}
-                        />
-                        <button onClick={handleSubmit} className='ToDoButton'>
-                            Add ToDo
-                        </button>
-                    </>
-                )
+
+            {
+                props.edit ?
+                    (
+                        <>
+                            <input
+                                type='text'
+                                placeholder='Update your To-Do'
+                                value={input}
+                                name='text'
+                                className='ToDoInput edit'
+                                onChange={handleChange}
+                                ref={inputRef}
+                            />
+                            <button onClick={handleSubmit} className='ToDoButton edit'>
+                                Update ToDo
+                            </button>
+                        </>
+                    ) :
+                    (
+                        <>
+                            <input
+                                type='text'
+                                placeholder='Add a To-Do'
+                                value={input}
+                                name='text'
+                                className='ToDoInput'
+                                onChange={handleChange}
+                                ref={inputRef}
+                            />
+                            <button onClick={handleSubmit} className='ToDoButton'>
+                                Add ToDo
+                            </button>
+                        </>
+                    )
             }
+
 
         </form>
     )

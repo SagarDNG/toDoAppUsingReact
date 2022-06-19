@@ -23,7 +23,7 @@ const ToDo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
 
     return todos.map((todo, index) => (
         <div
-            className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
+            className={todo.isComplete ? 'ToDoRow complete' : 'ToDoRow'}
             key={index}
         >
             <div key={todo.id} onClick={() => completeTodo(todo.id)}>
@@ -32,11 +32,11 @@ const ToDo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
             <div className='icons'>
                 <AiFillCloseCircle
                     onClick={() => removeTodo(todo.id)}
-                    className='delete-icon'
+                    className='deleteIcon'
                 />
                 <FaEdit
                     onClick={() => setEdit({ id: todo.id, value: todo.text })}
-                    className='edit-icon'
+                    className='editIcon'
                 />
             </div>
         </div>
