@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 function ToDoForm(props) {
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState(props.edit ? props.edit.value : '');
+
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current.focus();
+    });
 
     const handleChange = e => {
         setInput(e.target.value);
@@ -20,17 +26,41 @@ function ToDoForm(props) {
 
     return (
         <form onSubmit={handleSubmit} className='ToDoForm'>
-            <input
-                type='text'
-                placeholder='Add a To-Do'
-                value={input}
-                name='text'
-                className='ToDoInput'
-                onChange={handleChange}
-            />
-            <button onClick={handleSubmit} className='ToDoButton'>
-                Add todo
-            </button>
+            {props.edit ?
+                (
+                    <>
+                        <input
+                            type='text'
+                            placeholder='Update your To-Do'
+                            value={input}
+                            name='text'
+                            className='ToDoInput edit'
+                            onChange={handleChange}
+                            ref={inputRef}
+                        />
+                        <button onClick={handleSubmit} className='ToDoButton edit'>
+                            Update ToDo
+                        </button>
+                    </>
+                ) :
+                (
+                    <>
+                        <input
+                            type='text'
+                            placeholder='Add a To-Do'
+                            value={input}
+                            name='text'
+                            className='ToDoInput'
+                            onChange={handleChange}
+                            ref={inputRef}
+                        />
+                        <button onClick={handleSubmit} className='ToDoButton'>
+                            Add ToDo
+                        </button>
+                    </>
+                )
+            }
+
         </form>
     )
 }
