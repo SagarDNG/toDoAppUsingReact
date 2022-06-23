@@ -4,17 +4,17 @@ import ToDo from './ToDo'
 
 function ToDoList() {
     let initTodo;
-    if (localStorage.getItem("todos") === null) {
+    if (localStorage.getItem("Todo") === null) {
         initTodo = [];
     }
     else {
-        initTodo = JSON.parse(localStorage.getItem("todos"));
+        initTodo = JSON.parse(localStorage.getItem("Todo"));
     }
 
     const [todos, setTodos] = useState(initTodo);
 
     useEffect(() => {
-        localStorage.setItem("todos", JSON.stringify(todos));
+        localStorage.setItem("Todo", JSON.stringify(todos));
     }, [todos])
 
     const addTodo = todo => {
@@ -25,7 +25,6 @@ function ToDoList() {
         const newTodos = [todo, ...todos];
 
         setTodos(newTodos);
-        console.log(todo, ...todos);
     };
 
     const updateTodo = (todoId, newValue) => {
@@ -37,11 +36,11 @@ function ToDoList() {
     };
 
     const removeTodo = id => {
-        const removedArr = [...todos].filter(todo => todo.id !== id);
+        const remainingTodos = [...todos].filter(todo => todo.id !== id);
 
-        setTodos(removedArr);
+        setTodos(remainingTodos);
 
-        localStorage.setItem("todos", JSON.stringify(todos));
+        localStorage.setItem("Todo", JSON.stringify(todos));
     };
 
     const completeTodo = id => {
