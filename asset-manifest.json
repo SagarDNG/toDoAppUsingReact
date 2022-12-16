@@ -1,13 +1,13 @@
 {
-  "files": {
-    "main.css": "/toDoAppUsingReact/static/css/main.47f4d93f.css",
-    "main.js": "/toDoAppUsingReact/static/js/main.fd16d916.js",
-    "index.html": "/toDoAppUsingReact/index.html",
-    "main.47f4d93f.css.map": "/toDoAppUsingReact/static/css/main.47f4d93f.css.map",
-    "main.fd16d916.js.map": "/toDoAppUsingReact/static/js/main.fd16d916.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.47f4d93f.css",
-    "static/js/main.fd16d916.js"
-  ]
+  "main.css": "/toDoAppUsingReact/static/css/main.aacedc30.chunk.css",
+  "main.js": "/toDoAppUsingReact/static/js/main.34e057c4.chunk.js",
+  "main.js.map": "/toDoAppUsingReact/static/js/main.34e057c4.chunk.js.map",
+  "static/js/1.204c3ab8.chunk.js": "/toDoAppUsingReact/static/js/1.204c3ab8.chunk.js",
+  "static/js/1.204c3ab8.chunk.js.map": "/toDoAppUsingReact/static/js/1.204c3ab8.chunk.js.map",
+  "runtime~main.js": "/toDoAppUsingReact/static/js/runtime~main.abf1b663.js",
+  "runtime~main.js.map": "/toDoAppUsingReact/static/js/runtime~main.abf1b663.js.map",
+  "static/css/main.aacedc30.chunk.css.map": "/toDoAppUsingReact/static/css/main.aacedc30.chunk.css.map",
+  "index.html": "/toDoAppUsingReact/index.html",
+  "precache-manifest.dac14abadc1d77d9615d13c96490a7a3.js": "/toDoAppUsingReact/precache-manifest.dac14abadc1d77d9615d13c96490a7a3.js",
+  "service-worker.js": "/toDoAppUsingReact/service-worker.js"
 }
